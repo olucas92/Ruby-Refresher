@@ -84,6 +84,8 @@ end
 
 # return the shortest word in an array
 def longest_word_in_array(array)
+  arranged_array = array.group_by(&:size).max.last
+  arranged_array[0]
 end
 
 # add up all the numbers in an array, so [1, 3, 5, 6]
