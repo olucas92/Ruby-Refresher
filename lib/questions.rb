@@ -78,6 +78,8 @@ end
 
 # return the shortest word in an array
 def shortest_word_in_array(array)
+  arranged_array = array.group_by(&:size).min.last
+  arranged_array[0]
 end
 
 # return the shortest word in an array
