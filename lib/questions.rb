@@ -15,7 +15,7 @@ end
 
 # remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
-  array.map{|word| word if word != false}.compact
+  array.select{|e| e}
 end
 
 # don't reverse the array, but reverse every word inside it. e.g.
@@ -47,6 +47,9 @@ end
 # sort an array of words by their last letter, e.g.
 # ['sky', 'puma', 'maker'] becomes ['puma', 'maker', 'sky']
 def array_sort_by_last_letter_of_word(array)
+  #array.reverse.chars.sort { | a, b | a.casecmp(b) }.reverse.join
+  array.map{|word| word.reverse}.sort.map{|word| word.reverse}
+  #array.sort{|x,y| x[-1] <=> y[-1]}
 end
 
 # cut strings in half, and return the first half, e.g.
