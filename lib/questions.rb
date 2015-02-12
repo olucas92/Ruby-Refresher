@@ -21,7 +21,7 @@ end
 # don't reverse the array, but reverse every word inside it. e.g.
 # ['dog', 'monkey'] becomes ['god', 'yeknom']
 def reverse_every_element_in_array(array)
-  array.map{|word| word.reverse }
+  array.map{|name| name.reverse }
 end
 
 # given an array of student names, like ['Bob', 'Dave', 'Clive']
@@ -56,6 +56,9 @@ end
 # 'banana' becomes 'ban'. If the string is an odd number of letters
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
+  string.length % 2 == 0 ? stop = 0 : stop = 1
+  stop += string.length/2-1
+  string[0..stop]
 end
 
 # turn a positive integer into a negative integer. A negative integer
